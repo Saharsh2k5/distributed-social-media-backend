@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Members | College Social Media Platform</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body data-page="search-members">
+  <header class="topbar">
+    <div class="brand">College Social Media Platform</div>
+    <button id="menu-toggle" class="hamburger" aria-label="Open navigation">Menu</button>
+    <nav id="mobile-nav" class="mobile-nav hidden">
+      <a href="/static/portfolio.html" class="nav-link">Portfolio</a>
+      <a href="/static/search.html" class="nav-link">Search Members</a>
+      <a href="/static/create-post.html" class="nav-link">Create Post</a>
+      <a href="/static/posts.html" class="nav-link">Posts</a>
+      <button id="logout-btn" class="nav-logout" type="button">Logout</button>
+    </nav>
+  </header>
+
+  <main class="single-column">
+    <section class="card">
+      <h2>Search Members</h2>
+      <form id="member-search-form">
+        <label>Name or Email</label>
+        <input type="text" id="member_search_query" placeholder="rahul or iitgn.ac.in" required />
+        <button type="submit">Search</button>
+      </form>
+      <div id="member-search-status" class="status"></div>
+      <div class="panel">
+        <ul id="member-search-results"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

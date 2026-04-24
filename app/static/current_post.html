@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post Discussion | College Social Media Platform</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body data-page="current-post">
+  <header class="topbar">
+    <div class="brand">College Social Media Platform</div>
+    <button id="menu-toggle" class="hamburger" aria-label="Open navigation">☰</button>
+    <nav id="mobile-nav" class="mobile-nav hidden">
+      <a href="/static/portfolio.html" class="nav-link">Portfolio</a>
+      <a href="/static/search.html" class="nav-link">Search Members</a>
+      <a href="/static/create-post.html" class="nav-link">Create Post</a>
+      <a href="/static/posts.html" class="nav-link">Posts</a>
+      <button id="logout-btn" class="nav-logout" type="button">Logout</button>
+    </nav>
+  </header>
+
+  <main class="single-column">
+    <section class="card">
+      <p class="status"><a href="/static/posts.html">Back to all posts</a></p>
+      <h2>Post Discussion</h2>
+      <button id="refresh-current-post" type="button">Refresh Post</button>
+      <div id="current-post-status" class="status"></div>
+      <div id="current-post-view"></div>
+    </section>
+
+    <section class="card">
+      <h3>Comments</h3>
+      <form id="comment-create-form">
+        <label>Add a comment</label>
+        <textarea id="comment_content" rows="3" required></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+      <div id="comment-create-status" class="status"></div>
+      <button id="refresh-comments" type="button">Refresh Comments</button>
+      <div id="comment-list-status" class="status"></div>
+      <div id="comment-list"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

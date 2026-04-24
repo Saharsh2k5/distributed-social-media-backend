@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Post | College Social Media Platform</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body data-page="create-post">
+  <header class="topbar">
+    <div class="brand">College Social Media Platform</div>
+    <button id="menu-toggle" class="hamburger" aria-label="Open navigation">☰</button>
+    <nav id="mobile-nav" class="mobile-nav hidden">
+      <a href="/static/portfolio.html" class="nav-link">Portfolio</a>
+      <a href="/static/search.html" class="nav-link">Search Members</a>
+      <a href="/static/create-post.html" class="nav-link">Create Post</a>
+      <a href="/static/posts.html" class="nav-link">Posts</a>
+      <button id="logout-btn" class="nav-logout" type="button">Logout</button>
+    </nav>
+  </header>
+
+  <main class="single-column">
+    <section class="card">
+      <h2>Create Post</h2>
+      <form id="post-create-form">
+        <label>Content</label>
+        <textarea id="post_content" rows="3" required></textarea>
+
+        <label>Media URL</label>
+        <input type="text" id="post_media_url" />
+
+        <label>Media Type</label>
+        <select id="post_media_type">
+          <option>None</option>
+          <option>Image</option>
+          <option>Video</option>
+          <option>Document</option>
+        </select>
+
+        <label>Visibility</label>
+        <select id="post_visibility">
+          <option>Public</option>
+          <option>Followers</option>
+          <option>Private</option>
+        </select>
+
+        <button type="submit">Create Post</button>
+      </form>
+      <div id="post-create-status" class="status"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

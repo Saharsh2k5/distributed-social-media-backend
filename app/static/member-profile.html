@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Member Profile | College Social Media Platform</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body data-page="member-profile">
+  <header class="topbar">
+    <div class="brand">College Social Media Platform</div>
+    <button id="menu-toggle" class="hamburger" aria-label="Open navigation">Menu</button>
+    <nav id="mobile-nav" class="mobile-nav hidden">
+      <a href="/static/portfolio.html" class="nav-link">Portfolio</a>
+      <a href="/static/search.html" class="nav-link">Search Members</a>
+      <a href="/static/create-post.html" class="nav-link">Create Post</a>
+      <a href="/static/posts.html" class="nav-link">Posts</a>
+      <button id="logout-btn" class="nav-logout" type="button">Logout</button>
+    </nav>
+  </header>
+
+  <main class="single-column">
+    <section class="card">
+      <h2>Member Profile</h2>
+      <div id="member-view-status" class="status"></div>
+      <div id="member-portfolio-view" class="panel hidden"></div>
+
+      <div id="member-follow-actions" class="hidden">
+        <button type="button" id="follow-toggle-btn">Follow</button>
+      </div>
+      <div id="member-follow-action-status" class="status"></div>
+
+      <section id="member-admin-edit-panel" class="hidden">
+        <h3>Admin: Edit This Profile</h3>
+        <p id="member-admin-edit-target" class="status"></p>
+        <form id="member-admin-edit-form">
+          <label>Bio</label>
+          <textarea id="member_admin_bio" rows="3"></textarea>
+
+          <label>Contact Number</label>
+          <input type="text" id="member_admin_contact_number" />
+
+          <label>Department</label>
+          <input type="text" id="member_admin_department" />
+
+          <label>Age</label>
+          <input type="number" id="member_admin_age" min="16" max="100" />
+
+          <button type="submit">Update Member Profile</button>
+        </form>
+        <div id="member-admin-edit-status" class="status"></div>
+      </section>
+
+      <h3>Followers / Following</h3>
+      <div class="panel">
+        <p><strong>Followers</strong></p>
+        <ul id="member-followers-list"></ul>
+        <p><strong>Following</strong></p>
+        <ul id="member-following-list"></ul>
+      </div>
+      <div id="member-network-status" class="status"></div>
+
+      <h3>Posts</h3>
+      <div id="member-post-status" class="status"></div>
+      <div id="member-post-list"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
